@@ -25,5 +25,10 @@ var commandFuncs = map[string]cmd{
 func main() {
 	exp := os.Args[1]
 	fmt.Printf("Running experiment %s\n", exp)
-	commandFuncs[exp].fn()
+	cmd, ok := commandFuncs[exp]
+	if !ok {
+		fmt.Printf("Argument [%s] not found into the experiments playlist.\n", exp)
+		return
+	}
+	cmd.fn()
 }
