@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"os"
+
+	exps "github.com/mirkochip/get-programming-with-go/experiments"
+)
+
+// Definition of command
+type cmd struct {
+	fn func()
+}
+
+// Subcommands playlist
+var commandFuncs = map[string]cmd{
+	"greetings": {
+		fn: exps.Greetings,
+	},
+	"playground": {
+		fn: exps.Playground,
+	},
+}
+
+func main() {
+	exp := os.Args[1]
+	fmt.Printf("Running experiment %s\n", exp)
+	commandFuncs[exp].fn()
+}
