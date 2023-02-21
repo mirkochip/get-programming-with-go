@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/mirkochip/get-programming-with-go/common"
 	exps "github.com/mirkochip/get-programming-with-go/experiments"
 )
 
@@ -25,6 +26,7 @@ var commandFuncs = map[string]cmd{
 func main() {
 	exp := os.Args[1]
 	fmt.Printf("Running experiment %s\n", exp)
+	common.PrintSymbols("#", 29)
 	cmd, ok := commandFuncs[exp]
 	if !ok {
 		fmt.Printf("Argument [%s] not found into the experiments playlist.\n", exp)
