@@ -30,6 +30,9 @@ var commandFuncs = map[string]cmd{
 	"random-dates": {
 		fn: exps.RandomDates,
 	},
+	"mars-tickets": {
+		fn: exps.MarsTickets,
+	},
 }
 
 func main() {
