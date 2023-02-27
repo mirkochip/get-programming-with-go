@@ -11,7 +11,7 @@ import (
 func Guess() {
 	toGuess := 10
 	for {
-		guessed := rand.Intn(99) + 1
+		guessed := rand.Intn(100) + 1
 		fmt.Printf("Given %d, guessed: %d\n", toGuess, guessed)
 		time.Sleep(time.Second)
 		if guessed == toGuess {

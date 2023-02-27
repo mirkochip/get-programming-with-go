@@ -27,6 +27,9 @@ var commandFuncs = map[string]cmd{
 	"guess": {
 		fn: exps.Guess,
 	},
+	"random-dates": {
+		fn: exps.RandomDates,
+	},
 }
 
 func main() {
