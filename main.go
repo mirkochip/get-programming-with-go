@@ -36,6 +36,9 @@ var commandFuncs = map[string]cmd{
 	"piggy": {
 		fn: exps.Piggy,
 	},
+	"piggyInt": {
+		fn: exps.PiggyInt,
+	},
 }
 
 func main() {
